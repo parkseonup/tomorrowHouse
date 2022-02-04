@@ -20,7 +20,9 @@
 
    ```
    node-sass [options] <input> [output] Or: cat <input> | node-sass > output
+   ```
 
+   ```
    // 예시 "sass": "node-sass -wr --source-map true styles/main.scss style.css"
    ```
 
@@ -28,7 +30,9 @@
 
    ```
    npm run 스크립트명
+   ```
 
+   ```
    // 예시 npm run sass
    ```
 
@@ -58,7 +62,9 @@
 
      ```
      $variable: value;
+     ```
 
+     ```
      // 예시
      $hello-1: 1; // 소문자 사용시 하이픈(-) 사용
      $HELLO_2: 2; // 대문자 사용시 언더바(_) 사용
@@ -72,7 +78,9 @@
 
      ```
      #{$변수명}
+     ```
 
+     ```
      예시
      .col-sm-$i -> .col-sm-#{$i}
      ```
@@ -89,7 +97,9 @@
 
    ```
    @for 순서변수 from 시작순서 through 마지막순서 {}
+   ```
 
+   ```
    // 예시
    @for $i from 1 through 4 {
      @debug $i; // 결과값 1, 2, 3, 4
