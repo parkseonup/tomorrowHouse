@@ -60,7 +60,7 @@
 
 2. reset, font 등 기반이 되는 scss 파일은 base 폴더에 \_파일명.scss 로 저장
 
-3. 변수 선언
+3. $variable : 변수 선언
 
    - 선언 방법
 
@@ -91,7 +91,37 @@
      .col-sm-$i -> .col-sm-#{$i}
      ```
 
-4. 디버그
+4. @mixin
+
+   - (기본) 선언 및 사용
+
+     ```
+     // 선언
+     @mixin mixin명() {
+       // css 내용
+     }
+
+     // 사용
+     selector {
+       @include mixin명();
+     }
+     ```
+
+   - (parameter 사용) 선언 및 사용
+
+     ```
+     // 선언
+     @mixin mixin명($parameter) {
+       속성: $parameter;
+     }
+
+     // 사용
+     selector {
+       @include mixin명($parameter);
+     }
+     ```
+
+5. @debug : 디버그
 
    ```
    @debug
@@ -99,7 +129,7 @@
 
    - 터미널에 값을 출력할 때 사용 (js에서 console 같은 역할)
 
-5. for 반복문
+6. for 반복문
 
    ```
    @for 순서변수 from 시작순서 through 마지막순서 {}
@@ -113,6 +143,6 @@
    }
    ```
 
-6. 내장 함수
+7. 내장 함수
 
    - percentage(num) : 백분율 구해주는 함수
