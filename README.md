@@ -23,7 +23,9 @@
    ```
 
    ```
-   // 예시 "sass": "node-sass -wr --source-map true styles/main.scss style.css"
+   // 예시
+
+   "sass": "node-sass -wr --source-map true styles/main.scss style.css"
    ```
 
 3. 터미널에 npm 시작
@@ -33,7 +35,9 @@
    ```
 
    ```
-   // 예시 npm run sass
+   // 예시
+
+   npm run sass
    ```
 
 4. Sass Lint extension 사용
@@ -66,6 +70,7 @@
 
      ```
      // 예시
+
      $hello-1: 1; // 소문자 사용시 하이픈(-) 사용
      $HELLO_2: 2; // 대문자 사용시 언더바(_) 사용
      ```
@@ -81,7 +86,8 @@
      ```
 
      ```
-     예시
+     //예시
+
      .col-sm-$i -> .col-sm-#{$i}
      ```
 
@@ -101,6 +107,7 @@
 
    ```
    // 예시
+
    @for $i from 1 through 4 {
      @debug $i; // 결과값 1, 2, 3, 4
    }
