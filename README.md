@@ -121,6 +121,25 @@
      }
      ```
 
+     - parameter를 안쓸 경우를 대비하여 기본값을 작성해줌
+
+       ```
+       @mixin mixin명($parameter: 기본값) {
+         속성: $parameter;
+       }
+       ```
+
+       ```
+       // 예시
+
+       @mixin text-style($color: false) {
+         @if (type-of($color) === color) {
+           color: $color;
+         }
+         // color 값에 px이나 boolean 값이 출력되지 않게 하기 위해 if문 작성
+       }
+       ```
+
 5. @debug : 디버그
 
    ```
@@ -145,4 +164,5 @@
 
 7. 내장 함수
 
-   - percentage(num) : 백분율 구해주는 함수
+   - percentage(num) : 백분율 구하는 함수
+   - type-of() : type 구하는 함수
