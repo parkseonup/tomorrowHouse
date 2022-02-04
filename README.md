@@ -164,5 +164,5 @@ _참고링크 : node-sass https://www.npmjs.com/package/node-sass_
 
 7. 내장 함수
 
-   - **percentage(num)** : 백분율 구하는 함수
+   - **percentage()** : 백분율 구하는 함수
    - **type-of()** : type 구하는 함수
