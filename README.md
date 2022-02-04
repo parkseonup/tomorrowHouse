@@ -7,8 +7,8 @@
 
 ## Sass 설치
 
-- 참고링크 : node-sass https://www.npmjs.com/package/node-sass
-  <br/><br/>
+_참고링크 : node-sass https://www.npmjs.com/package/node-sass_
+<br/><br/>
 
 1. 터미널에 node-sass install
 
@@ -60,7 +60,7 @@
 
 2. reset, font 등 기반이 되는 scss 파일은 base 폴더에 \_파일명.scss 로 저장
 
-3. $variable : 변수 선언
+3. **$variable** : 변수 선언
 
    - 선언 방법
 
@@ -91,9 +91,9 @@
      .col-sm-$i -> .col-sm-#{$i}
      ```
 
-4. @mixin
+4. **@mixin**
 
-   - (기본) 선언 및 사용
+   - **기본** 선언 및 사용
 
      ```
      // 선언
@@ -107,7 +107,7 @@
      }
      ```
 
-   - (parameter 사용) 선언 및 사용
+   - **parameter** 선언 및 사용
 
      ```
      // 선언
@@ -140,7 +140,7 @@
        }
        ```
 
-5. @debug : 디버그
+5. **@debug** : 디버그
 
    ```
    @debug
@@ -148,7 +148,7 @@
 
    - 터미널에 값을 출력할 때 사용 (js에서 console 같은 역할)
 
-6. for 반복문
+6. **for 반복문**
 
    ```
    @for 순서변수 from 시작순서 through 마지막순서 {}
@@ -164,5 +164,5 @@
 
 7. 내장 함수
 
-   - percentage(num) : 백분율 구하는 함수
-   - type-of() : type 구하는 함수
+   - **percentage(num)** : 백분율 구하는 함수
+   - **type-of()** : type 구하는 함수
