@@ -52,117 +52,117 @@ _참고링크 : node-sass https://www.npmjs.com/package/node-sass_
 
 ## Sass 사용
 
-1. 출력될 scss 파일에 다른 scss 파일 첨부하는 법
+- 출력될 scss 파일에 다른 scss 파일 첨부하는 법
 
-   ```
-   @import './파일명' // 확장자 생략가능
-   ```
+  ```
+  @import './파일명' // 확장자 생략가능
+  ```
 
-2. reset, font 등 기반이 되는 scss 파일은 base 폴더에 \_파일명.scss 로 저장
+- reset, font 등 기반이 되는 scss 파일은 base 폴더에 \_파일명.scss 로 저장
 
-3. **$variable** : 변수 선언
+- **$variable** : 변수 선언
 
-   - 선언 방법
+  - 선언 방법
 
-     ```
-     $variable: value;
-     ```
+    ```
+    $variable: value;
+    ```
 
-     ```
-     // 예시
+    ```
+    // 예시
 
-     $hello-1: 1; // 소문자 사용시 하이픈(-) 사용
-     $HELLO_2: 2; // 대문자 사용시 언더바(_) 사용
-     ```
+    $hello-1: 1; // 소문자 사용시 하이픈(-) 사용
+    $HELLO_2: 2; // 대문자 사용시 언더바(_) 사용
+    ```
 
-   - 전역변수, 지역변수 구분 가능
-   - value에 number, string, list 등 작성 가능
-   - string은 반드시 따옴표('', "") 안에 작성
-   - scss import시 가장 상단에 삽입
-   - string과 변수 조합
+  - 전역변수, 지역변수 구분 가능
+  - value에 number, string, list 등 작성 가능
+  - string은 반드시 따옴표('', "") 안에 작성
+  - scss import시 가장 상단에 삽입
+  - string과 변수 조합
 
-     ```
-     #{$변수명}
-     ```
+    ```
+    #{$변수명}
+    ```
 
-     ```
-     //예시
+    ```
+    //예시
 
-     .col-sm-$i -> .col-sm-#{$i}
-     ```
+    .col-sm-$i -> .col-sm-#{$i}
+    ```
 
-4. **@mixin**
+- **@mixin**
 
-   - **기본** 선언 및 사용
+  - **기본** 선언 및 사용
 
-     ```
-     // 선언
-     @mixin mixin명() {
-       // css 내용
-     }
+    ```
+    // 선언
+    @mixin mixin명() {
+      // css 내용
+    }
 
-     // 사용
-     selector {
-       @include mixin명();
-     }
-     ```
+    // 사용
+    selector {
+      @include mixin명();
+    }
+    ```
 
-   - **parameter** 선언 및 사용
+  - **parameter** 선언 및 사용
 
-     ```
-     // 선언
-     @mixin mixin명($parameter) {
-       속성: $parameter;
-     }
+    ```
+    // 선언
+    @mixin mixin명($parameter) {
+      속성: $parameter;
+    }
 
-     // 사용
-     selector {
-       @include mixin명($parameter);
-     }
-     ```
+    // 사용
+    selector {
+      @include mixin명($parameter);
+    }
+    ```
 
-     - parameter를 안쓸 경우를 대비하여 기본값을 작성해줌
+    - parameter를 안쓸 경우를 대비하여 기본값을 작성해줌
 
-       ```
-       @mixin mixin명($parameter: 기본값) {
-         속성: $parameter;
-       }
-       ```
+      ```
+      @mixin mixin명($parameter: 기본값) {
+        속성: $parameter;
+      }
+      ```
 
-       ```
-       // 예시
+      ```
+      // 예시
 
-       @mixin text-style($color: false) {
-         @if (type-of($color) === color) {
-           color: $color;
-         }
-         // color 값에 px이나 boolean 값이 출력되지 않게 하기 위해 if문 작성
-       }
-       ```
+      @mixin text-style($color: false) {
+        @if (type-of($color) === color) {
+          color: $color;
+        }
+        // color 값에 px이나 boolean 값이 출력되지 않게 하기 위해 if문 작성
+      }
+      ```
 
-5. **@debug** : 디버그
+- **@debug** : 디버그
 
-   ```
-   @debug
-   ```
+  ```
+  @debug
+  ```
 
-   - 터미널에 값을 출력할 때 사용 (js에서 console 같은 역할)
+  - 터미널에 값을 출력할 때 사용 (js에서 console 같은 역할)
 
-6. **for 반복문**
+- **for 반복문**
 
-   ```
-   @for 순서변수 from 시작순서 through 마지막순서 {}
-   ```
+  ```
+  @for 순서변수 from 시작순서 through 마지막순서 {}
+  ```
 
-   ```
-   // 예시
+  ```
+  // 예시
 
-   @for $i from 1 through 4 {
-     @debug $i; // 결과값 1, 2, 3, 4
-   }
-   ```
+  @for $i from 1 through 4 {
+    @debug $i; // 결과값 1, 2, 3, 4
+  }
+  ```
 
-7. 내장 함수
+- 내장 함수
 
-   - **percentage()** : 백분율 구하는 함수
-   - **type-of()** : type 구하는 함수
+  - **percentage()** : 백분율 구하는 함수
+  - **type-of()** : type 구하는 함수
