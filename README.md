@@ -138,7 +138,39 @@ _참고링크 : node-sass https://www.npmjs.com/package/node-sass_
         }
         // color 값에 px이나 boolean 값이 출력되지 않게 하기 위해 if문 작성
       }
+      ``` 
+  - **@content**
+
+    - mixin을 include시 mixin 내부에 코드를 작성하고 싶을 때 추가로 선언해줘야 하는 것
+    
+    - 예시
+
       ```
+      // 선언시
+      @mixin responsive($screen) {
+        if ($screen == T) {
+          @media screen and (min-width: 1200px) {
+            @content;
+          }
+        }
+      }
+
+      // 사용시
+      p {
+        @include responsive(T) {
+          font-size: 12px;
+        }
+      }
+
+      // 결과값
+      p {
+        @media screen and (min-width: 1200px) {
+          font-size: 12px;
+        }
+      }
+      ```
+
+      
 
 - **@debug** : 디버그
 
