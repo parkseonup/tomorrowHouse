@@ -91,6 +91,24 @@ _참고링크 : node-sass https://www.npmjs.com/package/node-sass_
     .col-sm-$i -> .col-sm-#{$i}
     ```
 
+- **Map**
+
+  - key: value 형태로 이뤄짐 (자바스크립트의 Object와 비슷)
+  - 선언시
+
+    ```
+    $변수명: (
+      key1: value1,
+      key2: value2,
+    )
+    ```
+
+  - 사용시
+
+    ```
+    map-get($변수명, $key);
+    ```
+
 - **@mixin**
 
   - 함수와 비슷하나, 코드를 반환함
@@ -173,6 +191,42 @@ _참고링크 : node-sass https://www.npmjs.com/package/node-sass_
       }
       ```
 
+- **placeholder**
+
+  - 공통된 스타일을 묶어서 작성해줄 때 사용
+  - 선언시
+
+    ```
+    %스타일명 {
+      // 공통스타일 작성
+    }
+    ```
+
+    ```
+    // 예시
+    %tag-base {
+      font-size: 12px;
+      height: 20px;
+      padding: 0 6px;
+    }
+    ```
+
+  - 사용시
+
+    ```
+    선택자 {
+      @extent %스타일명;
+    }
+    ```
+
+    ```
+    // 예시
+    .tag-red {
+      @extent %tag-base;
+      background-color: red;
+    }
+    ```
+
 - **@function** : 함수 선언
 
   - mixin과 비슷하나, 코드가 아닌 값만 반환함
@@ -187,24 +241,6 @@ _참고링크 : node-sass https://www.npmjs.com/package/node-sass_
 
   - **percentage()** : 백분율 구하는 함수
   - **type-of()** : type 구하는 함수
-
-- **Map**
-
-  - key: value 형태로 이뤄짐 (자바스크립트의 Object와 비슷)
-  - 선언시
-
-    ```
-    $변수명: (
-      key1: value1,
-      key2: value2,
-    )
-    ```
-
-  - 사용시
-
-    ```
-    map-get($변수명, $key);
-    ```
 
 - **@debug** : 디버그
 
