@@ -93,6 +93,8 @@ _참고링크 : node-sass https://www.npmjs.com/package/node-sass_
 
 - **@mixin**
 
+  - 함수와 비슷하나, 코드를 반환함
+
   - **기본** 선언 및 사용
 
     ```
@@ -138,11 +140,12 @@ _참고링크 : node-sass https://www.npmjs.com/package/node-sass_
         }
         // color 값에 px이나 boolean 값이 출력되지 않게 하기 위해 if문 작성
       }
-      ``` 
+      ```
+
   - **@content**
 
     - mixin을 include시 mixin 내부에 코드를 작성하고 싶을 때 추가로 선언해줘야 하는 것
-    
+
     - 예시
 
       ```
@@ -170,7 +173,38 @@ _참고링크 : node-sass https://www.npmjs.com/package/node-sass_
       }
       ```
 
-      
+- **@function** : 함수 선언
+
+  - mixin과 비슷하나, 코드가 아닌 값만 반환함
+
+    ```
+    @function 함수명() {
+      @return 값;
+    }
+    ```
+
+- 내장 함수
+
+  - **percentage()** : 백분율 구하는 함수
+  - **type-of()** : type 구하는 함수
+
+- **Map**
+
+  - key: value 형태로 이뤄짐 (자바스크립트의 Object와 비슷)
+  - 선언시
+
+    ```
+    $변수명: (
+      key1: value1,
+      key2: value2,
+    )
+    ```
+
+  - 사용시
+
+    ```
+    map-get($변수명, $key);
+    ```
 
 - **@debug** : 디버그
 
@@ -193,8 +227,3 @@ _참고링크 : node-sass https://www.npmjs.com/package/node-sass_
     @debug $i; // 결과값 1, 2, 3, 4
   }
   ```
-
-- 내장 함수
-
-  - **percentage()** : 백분율 구하는 함수
-  - **type-of()** : type 구하는 함수
