@@ -10,10 +10,44 @@
   border: 0 !important;
 }
 
+// visible
 .sm_only {
   @media screen and (min-width: $md-breakpoint) {
     display: none !important;
   }
 }
 
-// only 시리즈, hidden 시리즈
+.md_only {
+  @media screen and (max-width: $md-breakpoint) {
+    display: none !important;
+  }
+
+  @media screen and (min-width: $lg-breakpoint) {
+    display: none !important;
+  }
+}
+
+.lg_only {
+  @media screen and (max-width: $lg-breakpoint) {
+    display: none !important;
+  }
+}
+
+// hidden
+.sm_hidden {
+  @media screen and (max-width: $md-breakpoint) {
+    display: none !important;
+  }
+}
+
+.md_hidden {
+  @media screen and (min-width: $md-breakpoint) and (max-width: $lg-breakpoint) {
+    display: none !important;
+  }
+}
+
+.lg_hidden {
+  @media screen and (min-width: $lg-breakpoint) {
+    display: none !important;
+  }
+}
