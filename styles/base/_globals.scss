@@ -11,13 +11,13 @@
 }
 
 // visible
-.sm_only {
+.sm-only {
   @media screen and (min-width: $md-breakpoint) {
     display: none !important;
   }
 }
 
-.md_only {
+.md-only {
   @media screen and (max-width: $md-breakpoint) {
     display: none !important;
   }
@@ -27,26 +27,26 @@
   }
 }
 
-.lg_only {
+.lg-only {
   @media screen and (max-width: $lg-breakpoint) {
     display: none !important;
   }
 }
 
 // hidden
-.sm_hidden {
+.sm-hidden {
   @media screen and (max-width: $md-breakpoint) {
     display: none !important;
   }
 }
 
-.md_hidden {
+.md-hidden {
   @media screen and (min-width: $md-breakpoint) and (max-width: $lg-breakpoint) {
     display: none !important;
   }
 }
 
-.lg_hidden {
+.lg-hidden {
   @media screen and (min-width: $lg-breakpoint) {
     display: none !important;
   }
