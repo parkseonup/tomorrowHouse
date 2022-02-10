@@ -7,9 +7,31 @@
     height: 50px;
   }
 
+  &-left {
+    .logo {
+      @include pos-center;
+
+      a {
+        display: block;
+      }
+
+      img {
+        display: block;
+        width: auto;
+        height: 20px;
+      }
+    }
+  }
+
   &-right {
     .button-group {
       @include flexbox(end);
+    }
+
+    .button-group {
+      .gnb-icon-button:nth-of-type(n + 2) {
+        margin-left: 4px;
+      }
     }
   }
 
@@ -25,23 +47,57 @@
     color: $blue;
   }
 
-  .logo {
-    @include pos-center;
-
-    a {
-      display: block;
+  @include responsive(T) {
+    &-wrapper {
+      height: 80px;
     }
 
-    img {
-      display: block;
-      width: auto;
-      height: 20px;
+    &-left {
+      @include flexbox(start);
+
+      .logo {
+        position: static;
+        margin-right: 32px;
+        transform: none;
+
+        img {
+          height: 24px;
+        }
+      }
+    }
+
+    &-right {
+      @include flexbox(end);
+
+      .button-group {
+        margin-right: 24px;
+
+        .gnb-icon-button:nth-of-type(n + 2) {
+          margin-left: 8px;
+        }
+
+        .gnb-avatart-button {
+          margin-left: 8px;
+        }
+      }
+    }
+
+    .btn-primary {
+      width: 88px;
+
+      i {
+        margin-left: 4px;
+        font-size: 20px;
+      }
     }
   }
 
-  .button-group {
-    .gnb-icon-button:nth-child(n + 2) {
-      margin-left: 4px;
+  @include responsive(D) {
+    &-right {
+      .input-group {
+        width: 264px;
+        margin-right: 24px;
+      }
     }
   }
 }
