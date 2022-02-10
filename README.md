@@ -1,11 +1,90 @@
-# tomorrowHouse
+# 내일의 집
 
 - 김버그의 UI 개발 부트캠프 강의 프로젝트
 - 오늘의집 UI 클론
 - Sass(SCSS) 수업
   <br/><br/>
 
-## Sass 설치
+### 1. GNB
+
+- 로그인을 하지 않은 경우
+
+```html
+<div class="button-group">
+  <button
+    class="gnb-icon-button is-search lg-hidden"
+    type="button"
+    aria-label="검색창 열기 버튼"
+  >
+    <i class="ic-search" aria-hidden></i>
+  </button>
+  <a
+    class="gnb-icon-button is-cart"
+    href="/"
+    aria-label="장바구니 페이지로 이동"
+  >
+    <i class="ic-cart" aria-hidden></i>
+    <strong class="badge">5</strong>
+  </a>
+  <div class="gnb-auth sm-hidden">
+    <a href="/">로그인</a>
+    <a href="/">회원가입</a>
+  </div>
+</div>
+```
+
+- 로그인을 했을 경우
+
+```html
+<div class="button-group">
+  <button
+    class="gnb-icon-button is-search lg-hidden"
+    type="button"
+    aria-label="검색창 열기 버튼"
+  >
+    <i class="ic-search" aria-hidden></i>
+  </button>
+
+  <a
+    class="gnb-icon-button sm-hidden"
+    href="/"
+    aria-label="스크랩북 페이지로 이동"
+  >
+    <i class="ic-bookmark" aria-hidden></i>
+  </a>
+
+  <a
+    class="gnb-icon-button sm-hidden"
+    href="/"
+    aria-label="내 소식 페이지로 이동"
+  >
+    <i class="ic-bell" aria-hidden></i>
+  </a>
+
+  <a
+    class="gnb-icon-button is-cart"
+    href="/"
+    aria-label="장바구니 페이지로 이동"
+  >
+    <i class="ic-cart" aria-hidden></i>
+    <strong class="badge">5</strong>
+  </a>
+
+  <button
+    class="gnb-avatart-button sm-hidden"
+    type="button"
+    aria-label="마이메뉴 열기 버튼"
+  >
+    <div class="avartar-32">
+      <img src="./assets/images/img-user-01.jpg" alt="사달라 아저씨" />
+    </div>
+  </button>
+</div>
+```
+
+## Sass
+
+### Sass 설치
 
 _참고링크 : node-sass https://www.npmjs.com/package/node-sass_
 <br/><br/>
@@ -50,7 +129,7 @@ _참고링크 : node-sass https://www.npmjs.com/package/node-sass_
 
    - .stylelintrc.json 생성 : https://gist.github.com/rohjs/3ea4235ea8f044f1acc27e8dc52d40c8
 
-## Sass 사용
+### Sass 사용
 
 - 출력될 scss 파일에 다른 scss 파일 첨부하는 법
 
