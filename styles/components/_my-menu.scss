@@ -60,4 +60,18 @@
       }
     }
   }
+
+  .gnb-avatart-button {
+    &:hover,
+    &.is-active {
+      .avartar-32 {
+        border-color: $blue;
+      }
+    }
+
+    .avartar-32 {
+      border: 3px solid $white;
+      transition: border-color 200ms ease-in-out;
+    }
+  }
 }
