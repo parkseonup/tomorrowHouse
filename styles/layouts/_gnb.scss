@@ -32,7 +32,7 @@
     }
 
     .button-group {
-      .gnb-icon-button:not(:last-of-type) {
+      .is-search {
         margin-right: 4px;
       }
     }
@@ -64,12 +64,27 @@
       .button-group {
         margin-right: 24px;
 
-        .gnb-icon-button:not(:last-of-type) {
+        .gnb-icon-button {
           margin-right: 8px;
         }
 
-        .gnb-avatart-button {
+        .gnb-auth {
           margin-left: 8px;
+
+          a {
+            @include text-style(14, $secondary);
+            font-weight: 700;
+            margin-right: 12px;
+            transition: color 200ms ease-in-out;
+
+            &:nth-child(n + 2) {
+              margin-right: 0;
+            }
+
+            &:hover {
+              color: $blue;
+            }
+          }
         }
       }
     }
