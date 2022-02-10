@@ -1,7 +1,7 @@
 .gnb-nav {
   $padding: 8px;
 
-  margin-left: -$padding;
+  margin-left: -#{$padding};
 
   &-list {
     @include flexbox(start);

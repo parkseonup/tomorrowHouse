@@ -49,7 +49,7 @@
       .logo {
         position: static;
         margin-right: 32px - $padding;
-        margin-left: -$padding;
+        margin-left: -#{$padding};
         transform: none;
 
         img {
