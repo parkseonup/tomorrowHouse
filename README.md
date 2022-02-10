@@ -133,8 +133,8 @@ _참고링크 : node-sass https://www.npmjs.com/package/node-sass_
 
 - 출력될 scss 파일에 다른 scss 파일 첨부하는 법
 
-  ```
-  @import './파일명' // 확장자 생략가능
+  ```scss
+  @import './파일명'; // 확장자 생략가능
   ```
 
 - reset, font 등 기반이 되는 scss 파일은 base 폴더에 \_파일명.scss 로 저장
@@ -143,11 +143,11 @@ _참고링크 : node-sass https://www.npmjs.com/package/node-sass_
 
   - 선언 방법
 
-    ```
+    ```scss
     $variable: value;
     ```
 
-    ```
+    ```scss
     // 예시
 
     $hello-1: 1; // 소문자 사용시 하이픈(-) 사용
@@ -160,11 +160,11 @@ _참고링크 : node-sass https://www.npmjs.com/package/node-sass_
   - scss import시 가장 상단에 삽입
   - string과 변수 조합
 
-    ```
+    ```scss
     #{$변수명}
     ```
 
-    ```
+    ```scss
     //예시
 
     .col-sm-$i -> .col-sm-#{$i}
@@ -184,7 +184,7 @@ _참고링크 : node-sass https://www.npmjs.com/package/node-sass_
 
   - 사용시
 
-    ```
+    ```scss
     map-get($변수명, $key);
     ```
 
@@ -194,7 +194,7 @@ _참고링크 : node-sass https://www.npmjs.com/package/node-sass_
 
   - **기본** 선언 및 사용
 
-    ```
+    ```scss
     // 선언
     @mixin mixin명() {
       // css 내용
@@ -208,7 +208,7 @@ _참고링크 : node-sass https://www.npmjs.com/package/node-sass_
 
   - **parameter** 선언 및 사용
 
-    ```
+    ```scss
     // 선언
     @mixin mixin명($parameter) {
       속성: $parameter;
@@ -222,13 +222,13 @@ _참고링크 : node-sass https://www.npmjs.com/package/node-sass_
 
     - parameter를 안쓸 경우를 대비하여 기본값을 작성해줌
 
-      ```
+      ```scss
       @mixin mixin명($parameter: 기본값) {
         속성: $parameter;
       }
       ```
 
-      ```
+      ```scss
       // 예시
 
       @mixin text-style($color: false) {
@@ -245,7 +245,7 @@ _참고링크 : node-sass https://www.npmjs.com/package/node-sass_
 
     - 예시
 
-      ```
+      ```scss
       // 선언시
       @mixin responsive($screen) {
         if ($screen == T) {
@@ -275,13 +275,13 @@ _참고링크 : node-sass https://www.npmjs.com/package/node-sass_
   - 공통된 스타일을 묶어서 작성해줄 때 사용
   - 선언시
 
-    ```
+    ```scss
     %스타일명 {
       // 공통스타일 작성
     }
     ```
 
-    ```
+    ```scss
     // 예시
     %tag-base {
       font-size: 12px;
@@ -292,13 +292,13 @@ _참고링크 : node-sass https://www.npmjs.com/package/node-sass_
 
   - 사용시
 
-    ```
+    ```scss
     선택자 {
       @extent %스타일명;
     }
     ```
 
-    ```
+    ```scss
     // 예시
     .tag-red {
       @extent %tag-base;
@@ -310,7 +310,7 @@ _참고링크 : node-sass https://www.npmjs.com/package/node-sass_
 
   - mixin과 비슷하나, 코드가 아닌 값만 반환함
 
-    ```
+    ```scss
     @function 함수명() {
       @return 값;
     }
@@ -323,19 +323,20 @@ _참고링크 : node-sass https://www.npmjs.com/package/node-sass_
 
 - **@debug** : 디버그
 
-  ```
-  @debug
+  ```scss
+  @debug;
   ```
 
   - 터미널에 값을 출력할 때 사용 (js에서 console 같은 역할)
 
 - **for 반복문**
 
-  ```
-  @for 순서변수 from 시작순서 through 마지막순서 {}
+  ```scss
+  @for 순서변수 from 시작순서 through 마지막순서 {
+  }
   ```
 
-  ```
+  ```scss
   // 예시
 
   @for $i from 1 through 4 {
