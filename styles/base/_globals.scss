@@ -18,7 +18,7 @@
 }
 
 .md-only {
-  @media screen and (max-width: $md-breakpoint) {
+  @media screen and (max-width: $md-breakpoint - 1) {
     display: none !important;
   }
 
@@ -28,20 +28,20 @@
 }
 
 .lg-only {
-  @media screen and (max-width: $lg-breakpoint) {
+  @media screen and (max-width: $lg-breakpoint - 1) {
     display: none !important;
   }
 }
 
 // hidden
 .sm-hidden {
-  @media screen and (max-width: $md-breakpoint) {
+  @media screen and (max-width: $md-breakpoint - 1) {
     display: none !important;
   }
 }
 
 .md-hidden {
-  @media screen and (min-width: $md-breakpoint) and (max-width: $lg-breakpoint) {
+  @media screen and (min-width: $md-breakpoint) and (max-width: $lg-breakpoint - 1) {
     display: none !important;
   }
 }
