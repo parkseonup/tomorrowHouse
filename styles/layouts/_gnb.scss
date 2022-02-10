@@ -29,22 +29,10 @@
     }
 
     .button-group {
-      .gnb-icon-button:nth-of-type(n + 2) {
-        margin-left: 4px;
+      .gnb-icon-button:not(:last-of-type) {
+        margin-right: 4px;
       }
     }
-  }
-
-  &-icon-button {
-    @include flexbox;
-    width: 32px;
-    height: 32px;
-    font-size: 24px;
-    color: $secondary;
-  }
-
-  &-menu-button {
-    color: $blue;
   }
 
   @include responsive(T) {
@@ -72,8 +60,8 @@
       .button-group {
         margin-right: 24px;
 
-        .gnb-icon-button:nth-of-type(n + 2) {
-          margin-left: 8px;
+        .gnb-icon-button:not(:last-of-type) {
+          margin-right: 8px;
         }
 
         .gnb-avatart-button {
