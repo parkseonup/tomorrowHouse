@@ -1,3 +1,7 @@
+body {
+  background-color: black;
+}
+
 .sidebar {
   width: 240px;
   padding: 32px 20px;
@@ -5,6 +9,20 @@
 
   &-header {
     padding: 0 12px;
+    border-bottom: 1px solid $border;
+
+    .logo {
+      @include flexbox(start);
+      a {
+        display: block;
+      }
+
+      img {
+        display: block;
+        width: auto;
+        height: 20px;
+      }
+    }
   }
 
   &-user,
@@ -42,16 +60,27 @@
     }
   }
 
-  .logo {
-    @include flexbox(start);
-    a {
-      display: block;
+  &-nav {
+    .drawer-menu {
+      border-bottom: 1px solid $border;
     }
+  }
 
-    img {
-      display: block;
-      width: auto;
-      height: 20px;
+  &-user-menu {
+    margin-top: 16px;
+
+    .user-menu-item {
+      a {
+        @include flexbox(start);
+        @include text-style(14, $primary);
+        height: 36px;
+        padding: 0 12px;
+        font-weight: 400;
+
+        &:active {
+          color: $blue;
+        }
+      }
     }
   }
 }
