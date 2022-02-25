@@ -1,0 +1,51 @@
+.lnb {
+  $lnb-link-padding: 8px;
+  $grid-margin: $sm-margin + $gutter / 2;
+
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &-list {
+    @include inline-flexbox(start);
+    height: 40px;
+    padding: 0 #{$grid-margin - $lnb-link-padding};
+    margin-left: -#{$grid-margin};
+    white-space: nowrap;
+    border-bottom: 1px solid #ddd;
+  }
+
+  &-item {
+    flex-shrink: 0;
+    height: 100%;
+
+    a {
+      @include flexbox;
+      @include text-style(13, $dark);
+      height: 40px;
+      padding: 0 $lnb-link-padding;
+      font-weight: 700;
+      border-bottom: 2px solid transparent;
+    }
+
+    &.is-active {
+      position: relative;
+
+      a {
+        color: $blue;
+        border-color: $blue;
+      }
+    }
+  }
+
+  @include responsive(T) {
+    &-item {
+      a {
+        @include text-style(14);
+        padding: 13px 8px;
+      }
+    }
+  }
+}
