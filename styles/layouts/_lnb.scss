@@ -2,11 +2,8 @@
   $lnb-link-padding: 8px;
   $grid-margin: $sm-margin + $gutter / 2;
 
+  @include no-scrollbar;
   overflow-x: scroll;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
 
   &-list {
     @include inline-flexbox(start);
@@ -36,15 +33,6 @@
       a {
         color: $blue;
         border-color: $blue;
-      }
-    }
-  }
-
-  @include responsive(T) {
-    &-item {
-      a {
-        @include text-style(14);
-        padding: 13px 8px;
       }
     }
   }
