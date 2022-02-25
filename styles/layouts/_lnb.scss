@@ -1,4 +1,6 @@
 .lnb {
+  $lnb-height-sm: 40px;
+  $lnb-height-md: 50px;
   $lnb-link-padding: 8px;
   $grid-margin: $sm-margin + $gutter / 2;
 
@@ -7,7 +9,7 @@
 
   &-list {
     @include inline-flexbox(start);
-    height: 40px;
+    height: $lnb-height-sm;
     padding: 0 #{$grid-margin - $lnb-link-padding};
     margin-left: -#{$grid-margin};
     white-space: nowrap;
@@ -21,10 +23,15 @@
     a {
       @include flexbox;
       @include text-style(13, $dark);
-      height: 40px;
+      height: $lnb-height-sm;
       padding: 0 $lnb-link-padding;
       font-weight: 700;
       border-bottom: 2px solid transparent;
+      transition: color 200ms ease-in-out;
+
+      &:hover {
+        color: $blue;
+      }
     }
 
     &.is-active {
@@ -33,6 +40,27 @@
       a {
         color: $blue;
         border-color: $blue;
+      }
+    }
+  }
+
+  @include responsive(T) {
+    height: $lnb-height-md;
+    border-bottom: 1px solid $border;
+    overflow-x: visible;
+
+    &-list {
+      height: auto;
+      padding: 0;
+      margin-left: 0;
+      border-bottom: 0;
+    }
+
+    &-item {
+      a {
+        @include text-style(14);
+        height: $lnb-height-md;
+        padding: 13px 8px;
       }
     }
   }
