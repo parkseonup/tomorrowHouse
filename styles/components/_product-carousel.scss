@@ -103,4 +103,35 @@
       }
     }
   }
+
+  @include responsive(D) {
+    @include flexbox(end, start);
+    flex-direction: row-reverse;
+
+    &-slider {
+      width: 500px;
+      height: 500px;
+    }
+
+    &-thumbnail {
+      margin-top: 0;
+      margin-right: 8px;
+    }
+
+    .thumbnail-list {
+      flex-direction: column;
+    }
+
+    .thumbnail-item {
+      &:nth-child(n + 2) {
+        margin-top: 8px;
+        margin-left: 0;
+      }
+
+      button {
+        width: 75px;
+        height: 75px;
+      }
+    }
+  }
 }
