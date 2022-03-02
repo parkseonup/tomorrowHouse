@@ -1,0 +1,90 @@
+.product-info {
+  padding: 20px 0;
+
+  &-header {
+    .info {
+      &-brand {
+        @include text-style(13, $blue);
+        font-weight: 700;
+
+        &:active {
+          opacity: 0.4;
+        }
+      }
+
+      &-title {
+        @include text-style(18, $dark);
+        font-weight: 400;
+      }
+
+      &-review {
+        @include flexbox(start);
+        margin-top: 4px;
+
+        p {
+          @include text-style(13, $blue);
+          margin-left: 8px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  &-price {
+    margin: 16px 0;
+
+    .info {
+      &-original-price {
+        @include flexbox(start);
+
+        .discount-rate {
+          @include inline-flexbox(start);
+          color: $blue;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 24px;
+
+          .rate {
+            font-family: $font-price;
+          }
+
+          .percent {
+            font-family: $font-main;
+          }
+        }
+      }
+
+      &-sale-price {
+        @include flexbox(start);
+
+        .tag-red {
+          margin-left: 4px;
+        }
+      }
+
+      &-point {
+        @include text-style(13, $secondary);
+        margin-top: 12px;
+
+        strong {
+          font-weight: 700;
+          color: $blue;
+        }
+      }
+    }
+  }
+
+  &-delivery {
+    border-top: 1px solid $border;
+    padding-top: 12px;
+
+    span {
+      @include text-style(16, $primary);
+      display: block;
+    }
+
+    .tag-gray {
+      margin-top: 2px;
+    }
+  }
+}
