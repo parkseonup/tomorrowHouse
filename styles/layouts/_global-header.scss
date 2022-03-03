@@ -23,6 +23,7 @@
 
     .lnb {
       top: $gnb-height-md;
+      z-index: $lnb-level;
     }
   }
 }
