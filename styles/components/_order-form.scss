@@ -1,5 +1,10 @@
 .order-form {
-  margin-top: 20px;
+  &,
+  .order-checkout,
+  .order-summary,
+  .button-group {
+    margin-top: 20px;
+  }
 
   .order-inputs {
     .select-group:nth-child(n + 2) {
@@ -7,9 +12,16 @@
     }
   }
 
+  .order-checkout {
+    .checkout-item {
+      &:nth-child(n + 2) {
+        margin-top: 8px;
+      }
+    }
+  }
+
   .order-summary {
     @include flexbox(between);
-    margin: 20px 0;
 
     dt {
       @include text-style(13, $dark);
