@@ -50,4 +50,34 @@
       font-weight: 700;
     }
   }
+
+  @include responsive(T) {
+    height: 54px;
+    margin-top: 40px;
+    background-color: $background;
+    border-bottom: 0;
+
+    &-list {
+      margin: 0;
+    }
+
+    &-item {
+      height: 54px;
+
+      button {
+        @include text-style(16);
+      }
+
+      .badge {
+        @include text-style(16);
+        margin-left: 8px;
+      }
+    }
+  }
+
+  @include responsive(D) {
+    &-item button:hover {
+      color: $blue;
+    }
+  }
 }
