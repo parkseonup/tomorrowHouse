@@ -1,0 +1,62 @@
+.score-stats {
+  &-item {
+    @include flexbox(start);
+    @include text-style(12, $secondary);
+
+    &:nth-child(n + 2) {
+      margin-top: 4px;
+    }
+
+    &.is-active {
+      font-weight: 700;
+      color: $blue;
+
+      dd {
+        .count {
+          font-weight: 700;
+        }
+      }
+    }
+
+    dd {
+      @include flexbox(start);
+      margin-left: 4px;
+
+      .bar-graph {
+        width: 70px;
+        height: 5px;
+        background-color: $border;
+        border-radius: 100px;
+        overflow: hidden;
+
+        .active-bar {
+          width: 30px;
+          height: 5px;
+          background-color: $blue;
+          border-radius: 100px;
+        }
+      }
+
+      .count {
+        margin-left: 4px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  @include responsive(T) {
+    &-item {
+      dd {
+        margin-left: 8px;
+
+        .bar-graph {
+          width: 180px;
+        }
+
+        .count {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+}
