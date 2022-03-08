@@ -1,10 +1,6 @@
 .review-card {
   padding: 20px 0;
 
-  &:nth-child(n + 2) {
-    border-top: 1px solid $border;
-  }
-
   &-header {
     @include flexbox(start);
 
