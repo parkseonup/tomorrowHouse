@@ -1,0 +1,100 @@
+.review-card {
+  padding: 20px 0;
+
+  &:nth-child(n + 2) {
+    border-top: 1px solid $border;
+  }
+
+  &-header {
+    @include flexbox(start);
+
+    .avartar-24,
+    .username {
+      &:active {
+        opacity: 0.4;
+      }
+    }
+
+    .info {
+      margin-left: 8px;
+    }
+
+    .username {
+      strong {
+        @include text-style(13, $primary);
+        font-weight: 400;
+      }
+    }
+
+    .detail {
+      @include flexbox(start);
+    }
+
+    .misc {
+      @include flexbox(start);
+      @include text-style(12, $secondary);
+      margin-left: 4px;
+
+      time::after {
+        content: '·';
+        margin: 0 2px;
+      }
+    }
+  }
+
+  &-body {
+    margin-top: 20px;
+
+    p {
+      @include text-style(13, $primary);
+    }
+  }
+
+  &-footer {
+    @include flexbox(start);
+    margin-top: 20px;
+
+    button {
+      width: 120px;
+    }
+
+    p {
+      @include text-style(12, $primary);
+      margin-left: 8px;
+
+      strong {
+        font-weight: 400;
+
+        span {
+          font-weight: 700;
+          color: $dark;
+        }
+      }
+    }
+  }
+
+  @include responsive(T) {
+    padding: 40px 0 40px 32px;
+
+    &-header {
+      margin-left: -32px;
+    }
+
+    &-body {
+      p {
+        @include text-style(14);
+      }
+    }
+  }
+
+  @include responsive(D) {
+    &-header {
+      .avartar-24,
+      .username {
+        &:hover {
+          opacity: 0.4;
+        }
+      }
+    }
+  }
+}
