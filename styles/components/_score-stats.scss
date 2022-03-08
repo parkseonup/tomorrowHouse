@@ -34,6 +34,7 @@
           height: 5px;
           background-color: $blue;
           border-radius: 100px;
+          animation: slide-acitve-bar 1000ms;
         }
       }
 
@@ -58,5 +59,15 @@
         }
       }
     }
+  }
+}
+
+@keyframes slide-acitve-bar {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
   }
 }
