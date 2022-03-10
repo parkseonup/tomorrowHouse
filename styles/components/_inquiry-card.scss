@@ -1,0 +1,71 @@
+.inquiry-card {
+  padding-bottom: 40px;
+
+  &-header {
+    @include text-style(12, $primary);
+
+    .detail,
+    .misc {
+      @include flexbox(start);
+
+      dd,
+      time {
+        @include flexbox(start);
+
+        &:nth-child(n + 2)::before {
+          content: '|';
+          display: block;
+          margin: 0 4px;
+        }
+      }
+    }
+
+    .detail {
+      dd:first-of-type::before {
+        display: none;
+      }
+    }
+
+    .misc {
+      @include flexbox(start);
+      margin-top: 8px;
+      color: $tertiary;
+
+      strong {
+        font-weight: 400;
+      }
+    }
+  }
+
+  &-body {
+    @include text-style(13, $primary);
+    margin-top: 8px;
+
+    .question-content {
+      position: relative;
+    }
+
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-weight: 700;
+      color: $blue;
+    }
+
+    p {
+      padding-left: 20px;
+    }
+  }
+
+  @include responsive(T) {
+    &-body {
+      @include text-style(16);
+      margin-top: 20px;
+
+      p {
+        padding-left: 24px;
+      }
+    }
+  }
+}
