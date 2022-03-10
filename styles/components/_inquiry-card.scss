@@ -54,7 +54,14 @@
     }
 
     p {
+      @include flexbox(start);
       padding-left: 20px;
+
+      .ic-lock {
+        margin-right: 8px;
+        font-size: 16px;
+        color: $tertiary;
+      }
     }
   }
 
