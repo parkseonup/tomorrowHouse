@@ -274,7 +274,7 @@
           </li>
         </ol>
 
-        <div class="pagenation">
+        <div class="pagination">
           <ol class="page-list">
             <li class="page-item is-active">
               <a href="">1</a>
@@ -596,7 +596,7 @@
           </li>
         </ol>
 
-        <div class="pagenation">
+        <div class="pagination">
           <ol class="page-list">
             <li class="page-item is-active">
               <a href="">1</a>
