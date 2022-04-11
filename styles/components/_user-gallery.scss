@@ -1,6 +1,55 @@
 .user-gallery {
   margin: 0 -#{$grid-margin};
 
+  &-slider {
+    position: relative;
+  }
+
+  &-controls {
+    @include pos-center;
+    @include flexbox(between);
+    width: 100%;
+    padding: 0 54px;
+
+    .control-button {
+      @include flexbox;
+      width: 40px;
+      height: 40px;
+      color: $primary;
+      background-color: $white;
+      border-radius: 50%;
+      transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+
+      &.is-prev {
+        .ic-chevron {
+          margin-left: -2px;
+          transform: rotate(90deg);
+        }
+      }
+
+      &.is-next {
+        .ic-chevron {
+          margin-right: -2px;
+          transform: rotate(-90deg);
+        }
+      }
+
+      &:hover {
+        background-color: $blue;
+        color: $white;
+      }
+
+      &[disabled] {
+        visibility: hidden;
+      }
+
+      .ic-chevron {
+        display: block;
+        font-size: 28px;
+      }
+    }
+  }
+
   .thumbnail-list {
     @include flexbox(start);
     margin-top: 4px;
