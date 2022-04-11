@@ -36,15 +36,39 @@
       flex-shrink: 0;
     }
 
+    .avartar-32 {
+      &:active {
+        opacity: 0.4;
+      }
+    }
+
     .username {
       @include truncate;
       flex-grow: 1;
       margin-left: 8px;
       font-weight: 700;
+
+      &:active {
+        color: $blue;
+      }
     }
 
     .order {
       margin-left: 8px;
+    }
+  }
+
+  @include responsive(D) {
+    .avartar-32 {
+      &:hover {
+        opacity: 0.4;
+      }
+    }
+
+    .username {
+      &:hover {
+        color: $blue;
+      }
     }
   }
 }
